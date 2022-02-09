@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- CSS External 정의 -->
+		<!--<link rel="stylesheet" type="text/css" href="./Media.css">
+		-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="./js/TP2.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="./css/TP2.css">
+		<title>Film Info Crawller</title>
+	</head>
+  <body>
+		<h1> Film Info Crawler by S.J.Y</h1>
+		<hr>
+		<!--검색 창-->
+		<div>
+			<p> 영화를 검색하세요.</p>
+			<input type="text" placeholder="ex) 미이라" id="search">
+			<br>
+	    <input type="button" value="검색" id="button" onclick="onclickSearch()">
+			<!--영화의 포스터와 간단한 정보가 표시되는 부분-->
+			<div id="info_wrapper">
+				<div id="poster_title">
+				</div>
+				<div id="poster_wrapper">
+				</div>
+				<div id="info_wrapper_wrapper">
+				</div>
+			</div>
+		</div>
+
+		<hr>
+		<!--크롤링 한 정보를 이용하여, 각 영화 사이트들의 해당 영화의 평점을 평균을 내서 이 곳에 표시함 -->
+		<div class="wrapper">
+			<h3> Average Score </h3><br>
+			<div>
+				<div id = "starWrapper">
+					<img src="./img/blue.png" class="star">
+					<img src="./img/blue.png" class="star">
+					<img src="./img/blue.png" class="star">
+					<img src="./img/blue.png" class="star">
+					<img src="./img/blue_half.png" class="halfStar">
+					<span id="score">9.0/10</span>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<!--크롤링 한 리뷰들을 보여줌. 리뷰들은 링크로써 해당 리뷰로 이동 가능-->
+		<div class="wrapper">
+			<h3> Crawled Review </h3>
+			<div>
+				<table class="board">
+					<tr>
+						<th style="width:10%">index</th>
+						<th style="width:70%"> 제 목 </th>
+						<th>작성자</th>
+					</tr>
+					<tr>
+						<td class="index"> 1 </td>
+						<td id="index1"></td>
+						<td class="user" id="index1_info"></td>
+					</tr>
+					<tr>
+						<td class="index"> 2 </td>
+						<td id="index2"></td>
+						<td class="user" id="index2_info"></td>
+					</tr>
+					<tr>
+						<td class="index"> 3 </td>
+						<td id="index3"></td>
+						<td class="user" id="index3_info"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<br>
+		<hr>
+		<!--staff들의 정보를 크롤링하여 표시하여 줌-->
+		<div id="staff">
+		</div>
+		<br>
+		<hr>
+		<h3> Synopsis and Video </h3>
+		<!--줄거리 표시-->
+		<div id="synopsis">
+		</div>
+		<!--유튜브 api를 이용하여 해당 영화의 영상을 띄워 줌-->
+		<div id="youtubeFrame">
+			<iframe id="ytplayer" type="text/html" width="640" height="360" src="" frameborder="0"/>
+		</div>
+	</body>
+	<footer>
+		<p>posted by 201202165 유성준</p>
+	</footer>
+</html>

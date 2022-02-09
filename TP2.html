@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- CSS External 정의 -->
+		<!--<link rel="stylesheet" type="text/css" href="./Media.css">
+		-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="./js/TP2.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="./css/TP2.css">
+	</head>
+  <body>
+		<h1> Film Info Crawler </h1>
+		<hr>
+		<!--검색 창, jquery를 이용하여, 크롤링한 정보들로 자동완성 기능을 구현해 볼 예정임 -->
+		<form onsubmit="./js/crawler.js">
+			<p>다운받고 싶은 영화를 검색하세요.</p>
+			<input type="text" placeholder="ex) 미이라" id="autoComplete">
+			<br>
+	    <input type="submit" value="검색" id="button" onclick="">
+		</form>
+
+		<hr>
+		<!--크롤링 한 정보를 이용하여, 각 영화 사이트들의 해당 영화의 평점을 평균을 내서 이 곳에 표시함 -->
+		<div class="wrapper">
+			<h3> 평균 별점 </h3><br>
+			<div>
+				<div>
+					<img src="./img/Star.png" class="star">
+					<img src="./img/Star.png" class="star">
+					<img src="./img/Star.png" class="star">
+					<img src="./img/Star.png" class="star">
+					<img src="./img/half_Star.jpg" class="halfStar">
+					<span class="score">4.5/5</span>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<!--각 영화 사이트들의 상위 리뷰 몇 개 씩을 가져와서 이 곳에 제목과 작성자 정보를 추가하고, 제목을 누르면 해당
+		리뷰로 이동 할 수 있도록 링크를 만들 예정 -->
+		<div class="wrapper">
+			<h3> Crawled Review </h3>
+			<div>
+				<table class="board">
+					<tr>
+						<th style="width:10%">index</th>
+						<th style="width:70%"> 제 목 </th>
+						<th>작성자</th>
+					</tr>
+					<tr>
+						<td class="index"> 1 </td>
+						<td> 이 영화 정말 추천합니다! </td>
+						<td class="user"> sjyoo1699 </td>
+					</tr>
+					<tr>
+						<td class="index"> 2 </td>
+						<td> 노잼이네요 </td>
+						<td class="user"> edonc </td>
+					</tr>
+					<tr>
+						<td class="index"> 3 </td>
+						<td> 그냥 그래요 </td>
+						<td class="user"> vndfkd </td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

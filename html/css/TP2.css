@@ -1,0 +1,131 @@
+h1 {
+  text-align: center;
+}
+
+body{
+  background-image: url('../img/20160130073319_1.jpg');
+  background-size: 100%;
+  color: white;
+  text-shadow: 0 0 2px black;
+  position: relative;
+}
+body::after{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5),
+        inset 0 0 100px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 255, 0.1);
+}
+
+.star {
+  height: 100px;
+  width: 100px;
+}
+
+.halfStar{
+  height: 100px;
+  width: 50px;
+}
+
+.score{
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.board{
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,td{
+  border:1px solid black;
+  border-collapse: collapse;
+}
+.index{
+  text-align: center;
+}
+
+.user{
+  text-align: center;
+}
+
+#info_wrapper{
+  width:480px;
+  height: 250px;
+  margin-left: 10px;
+  float: right;
+  margin-right:10px;
+}
+
+#poster_wrapper{
+  height: 250px;
+  width: 120px;
+  float: left;
+  margin-right: 10px;
+}
+
+#info_wrapper_wrapper{
+  width: 480px;
+  height: 250px;
+}
+#poster_title{
+  float: left;
+  width: 480px;
+  margin-bottom: 10px;
+}
+.link_join{
+  text-decoration: none;
+  display: inline-block;
+  color:white;
+}
+
+li{
+  width: 50%;
+  float: left;
+}
+
+.movie_join :hover{
+  cursor: default;
+}
+
+.link_join :hover{
+  cursor: default;
+}
+
+.link_all{
+  display: none;
+}
+
+.txt_join{
+  font-size:12px;
+}
+
+a{
+  text-decoration: none;
+  color:white;
+}
+
+.screen_out{
+  display: none;
+}
+
+.info:hover{
+  cursor: default;
+}
+
+footer{
+  background-color: black;
+  color:white;
+  text-align: center;
+  text-decoration-style: wavy;
+}
+
+.youtubeFrame{
+  width: 640px;
+  height: 360px;
+}
